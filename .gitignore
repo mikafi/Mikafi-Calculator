@@ -1,0 +1,15 @@
+# MacOS
+.DS_Store
+
+# CodeEditor
+.idea
+/.vscode/
+
+# Node
+node_modules
+
+# Local Netlify folder
+.netlify
+
+# Build folder
+dist
