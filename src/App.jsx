@@ -343,8 +343,7 @@ function App() {
                 label="Break Even in"
                 value={
                   machinePurchasePrice /
-                    (expectedBeverageProfit + coffeeBagProfit - currentProfit) +
-                  1
+                  (expectedBeverageProfit + coffeeBagProfit - currentProfit)
                 }
                 type="months"
                 size="small"
