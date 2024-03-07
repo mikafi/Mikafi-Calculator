@@ -44,7 +44,8 @@ const Value = ({
         })}
       >
         {type === '$' && formatMoney(value)}
-        {type === 'kg' && value.toFixed(2) + 'kg'}
+        {type === 'kg' && value.toFixed(2) + ' kg'}
+        {type === 'months' && value.toFixed(0) + ' months'}
       </span>
       <span>
         {comment && (

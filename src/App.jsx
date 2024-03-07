@@ -297,7 +297,7 @@ function App() {
             </div>
           </div>
           <div className="flex bg-[#FAE4C6] p-6 md:p-8">
-            <div className="w-1/3">
+            <div className="w-1/4">
               <Value
                 label="Total Profit Increase, per month"
                 value={expectedBeverageProfit + coffeeBagProfit - currentProfit}
@@ -309,9 +309,9 @@ function App() {
                 sign="always"
               ></Value>
             </div>
-            <div className="w-1/3">
+            <div className="w-1/4">
               <Value
-                label="Total Turnover  Increase, per month"
+                label="Total Turnover Increase, per month"
                 value={
                   expectedBeverageTurnover + coffeeBagTurnover - currentTurnover
                 }
@@ -325,7 +325,7 @@ function App() {
                 sign="always"
               ></Value>
             </div>
-            <div className="w-1/3">
+            <div className="w-1/4">
               <Value
                 label="Total Costs Change, per month"
                 value={expectedBeverageCosts + coffeeBagCost}
@@ -335,6 +335,19 @@ function App() {
                   (expectedBeverageCosts + coffeeBagCost) /
                   (currentProfit / 100)
                 }
+                sign="always"
+              ></Value>
+            </div>
+            <div className="w-1/4">
+              <Value
+                label="Break Even in"
+                value={
+                  machinePurchasePrice /
+                    (expectedBeverageProfit + coffeeBagProfit - currentProfit) +
+                  1
+                }
+                type="months"
+                size="small"
                 sign="always"
               ></Value>
             </div>
