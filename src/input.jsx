@@ -1,6 +1,15 @@
+import classNames from 'classnames';
 import React, { useState } from 'react';
 
-const Input = ({ label, value, unit, onChange, increment = 0.5, comment }) => {
+const Input = ({
+  label,
+  value,
+  unit,
+  onChange,
+  increment = 0.5,
+  comment,
+  dark = true,
+}) => {
   const handleChange = e => {
     onChange(e.target.value);
   };
@@ -19,7 +28,13 @@ const Input = ({ label, value, unit, onChange, increment = 0.5, comment }) => {
       <input
         step={increment}
         type="number"
-        className="number-small focus:border-none bg-gray-300 hover:bg-gray-400 focus:outline-none border rounded-none border-none w-full h-full px-4 flex justify-end pt-5"
+        className={classNames(
+          'number-small focus:border-none focus:outline-none border rounded-none border-none w-full h-full px-4 flex justify-end pt-5 ',
+          {
+            'bg-gray-300 hover:bg-gray-400': dark,
+            'bg-gray-200 hover:bg-gray-300': dark === false,
+          },
+        )}
         value={value}
         onChange={handleChange}
         onBlur={handleBlur}
@@ -28,7 +43,7 @@ const Input = ({ label, value, unit, onChange, increment = 0.5, comment }) => {
       <div className="opacity-50 text text-lg pointer-events-none	select-none absolute pr-8 right-4 bottom-[11px] text-right">
         {comment}
       </div>
-      <div className="text-lg pointer-events-none	select-none absolute pr-5 right-0 bottom-[11px] ">
+      <div className="text-[1rem] pointer-events-none	select-none absolute pr-5 right-0 bottom-[13px] ">
         {unit}
       </div>
     </div>

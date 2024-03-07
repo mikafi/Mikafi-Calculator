@@ -103,12 +103,12 @@ function App() {
           <div className="flex flex-col gap-2 md:gap-8">
             <div className="flex flex-col gap-0 md:gap-4">
               <h1 className="section-title">Your Monthly Coffee Business</h1>
-              <p className="text h-16">
+              <p className="text h-16 w-9/12">
                 The numbers are calculated with an average of 10gr of coffee per
                 beverage and 24 open days per month
               </p>
             </div>
-            <div className="flex flex-col gap-2 min-w-[200px] w-11/12 pb-8 md:pb-0">
+            <div className="flex flex-col gap-2 min-w-[200px] w-9/12 pb-8 md:pb-0">
               <Input
                 value={currentCoffeeUsed}
                 onChange={setCurrentCoffeeUsed}
@@ -252,6 +252,7 @@ function App() {
                         label="Price per Bag"
                         unit="$"
                         increment={1}
+                        dark={false}
                       ></Input>
                     </div>
                     <div className="w-1/3 py-2 pl-8">

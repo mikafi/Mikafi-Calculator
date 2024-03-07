@@ -89,7 +89,8 @@ const Value = ({
         )}
         {pourcent && (
           <span
-            className={classNames('pl-1 text text-lg ', {
+            className={classNames('pl-1  text-sm ', {
+              'font-medium tracking-wide': size === 'large',
               'text-green': trafficLight(),
               'text-red-600': trafficLight() === false,
             })}
