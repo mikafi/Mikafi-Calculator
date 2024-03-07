@@ -38,7 +38,7 @@ body {
 }
 
 .section-title {
-  @apply text-sm font-medium pb-4 tracking-wide;
+  @apply text-[0.9rem] font-medium pb-4 tracking-wide;
 }
 
 .number-large {
