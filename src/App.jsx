@@ -239,7 +239,7 @@ function App() {
                     label="500gr bags sold daily"
                     value={4}
                     min={0}
-                    max={30}
+                    max={20}
                     onChange={setExpectedBagsSold}
                   ></Slider>
 
