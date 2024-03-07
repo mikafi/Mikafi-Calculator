@@ -218,6 +218,7 @@ function App() {
                   negative
                   pourcent={expectedBeverageCosts / (currentCosts / 100) - 100}
                   sign="always"
+                  info="Green Coffee + Mikafi Charges"
                 ></Value>
 
                 <Value
