@@ -311,6 +311,18 @@ function App() {
             </div>
             <div className="w-1/4">
               <Value
+                label="Break Even in"
+                value={
+                  machinePurchasePrice /
+                  (expectedBeverageProfit + coffeeBagProfit - currentProfit)
+                }
+                type="months"
+                size="large"
+                sign="always"
+              ></Value>
+            </div>
+            <div className="w-1/4">
+              <Value
                 label="Total Turnover Increase, per month"
                 value={
                   expectedBeverageTurnover + coffeeBagTurnover - currentTurnover
@@ -335,18 +347,6 @@ function App() {
                   (expectedBeverageCosts + coffeeBagCost) /
                   (currentProfit / 100)
                 }
-                sign="always"
-              ></Value>
-            </div>
-            <div className="w-1/4">
-              <Value
-                label="Break Even in"
-                value={
-                  machinePurchasePrice /
-                  (expectedBeverageProfit + coffeeBagProfit - currentProfit)
-                }
-                type="months"
-                size="small"
                 sign="always"
               ></Value>
             </div>
